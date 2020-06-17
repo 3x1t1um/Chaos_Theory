@@ -7,6 +7,7 @@
 ## Mathematics
 
 Diagram :
+
 ![alt text](http://image.noelshack.com/fichiers/2020/25/3/1592384284-unnamed.jpg)
 
 All formulas used :
