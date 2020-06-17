@@ -33,19 +33,22 @@ class Pendulum(object):
             self.formula1 = self.theta1prime()
             self.formula2 = self.theta2prime()
 
-            self.theta1dot += self.formula1 * 0.01
-            self.theta2dot += self.formula2 * 0.01
-            self.theta1 += self.theta1dot * 0.01
-            self.theta2 += self.theta2dot * 0.01
+            self.theta1dot = self.theta1dot + self.formula1 * 0.01
+            self.theta2dot = self.theta2dot + self.formula2 * 0.01
+            self.theta1 = self.theta1 + self.theta1dot * 0.01
+            self.theta2 = self.theta2 + self.theta2dot * 0.01
 
-            x1, y1 = self.l1*np.sin(self.theta1), self.l1*np.cos(self.theta1)
-            x2, y2 = x1 + self.l2*np.sin(self.theta2), y1 + self.l2*np.cos(self.theta2)
+            self.x1, self.y1 = self.l1*np.sin(self.theta1), self.l1*np.cos(self.theta1)
+            self.x2, self.y2 = self.x1 + self.l2*np.sin(self.theta2), self.y1 + self.l2*np.cos(self.theta2)
 
-            self.canv.create_oval(225+x1, 90+y1, 245+x1, 110+y1, fill='red')
-            self.canv.create_oval(225+x2, 90+y2, 245+x2, 110+y2, fill='red')
+            self.canvas()
+
+    def canvas(self):
+            self.canv.create_oval(self.x1+225, self.y1+90, self.x1+245, self.y1+110, fill='red')
+            self.canv.create_oval(self.x2+225, self.y2+90, self.x2+245, self.y2+110, fill='red')
             self.canv.create_line(270, 100, 200, 100, width=5, fill='black')
-            self.canv.create_line(235, 100, 235+x1, 100+y1, width=2, fill='red')
-            self.canv.create_line(235+x1, 100+y1, 235+x2, 100+y2, width=2, fill='red')
+            self.canv.create_line(235, 100, self.x1+235, self.y1+100, width=2, fill='red')
+            self.canv.create_line(self.x1+235, self.y1+100, self.x2+235, self.y2+100, width=2, fill='red')
             
             self.canv.update()
             self.canv.delete("all")
