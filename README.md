@@ -14,7 +14,7 @@ Theta1 and Theta0 :
 
 ![alt text](http://image.noelshack.com/fichiers/2020/25/3/1592384419-capture.png)
 
-Position x1, y1, x2 and y2 :
+Positions x1, y1, x2 and y2 :
 
 ```
 x1 = L1 sin theta1
