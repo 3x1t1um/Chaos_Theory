@@ -30,11 +30,11 @@ class Pendulum(object):
 
     def launch(self):
         while 1:
-            self.theta1dotdot = self.theta1prime()
-            self.theta2dotdot = self.theta2prime()
+            self.formula1 = self.theta1prime()
+            self.formula2 = self.theta2prime()
 
-            self.theta1dot += self.theta1dotdot * 0.01
-            self.theta2dot += self.theta2dotdot * 0.01
+            self.theta1dot += self.formula1 * 0.01
+            self.theta2dot += self.formula2 * 0.01
             self.theta1 += self.theta1dot * 0.01
             self.theta2 += self.theta2dot * 0.01
 
