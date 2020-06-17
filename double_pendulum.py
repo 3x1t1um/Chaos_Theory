@@ -14,15 +14,15 @@ class Pendulum(object):
         self.init()
 
     def theta1prime(self):
-            inst1 = (-self.g*(2*self.m1+self.m2)*np.sin(self.theta1))-self.m2*self.g*np.sin(self.theta1-2*self.theta2)
-            inst2 = (-2*np.sin(self.theta1-self.theta2)*self.m2*(self.theta2dot**2*self.l2+self.theta1dot**2*self.l1*np.cos(self.theta1-self.theta2)))
+            inst1 = -self.g*(2*self.m1+self.m2)*np.sin(self.theta1)-self.m2*self.g*np.sin(self.theta1-2*self.theta2)
+            inst2 = -2*np.sin(self.theta1-self.theta2)*self.m2*(self.theta2dot**2*self.l2+self.theta1dot**2*self.l1*np.cos(self.theta1-self.theta2))
             divise = self.l1*(2*self.m1+self.m2-self.m2*np.cos(2*self.theta1-2*self.theta2))
             
             return (inst1 + inst2)/divise
 
     def theta2prime(self):
             inst1 = 2*np.sin(self.theta1-self.theta2)
-            inst2 = (self.theta1dot**2*self.l1*(self.m1+self.m2))
+            inst2 = self.theta1dot**2*self.l1*(self.m1+self.m2)
             inst3 = self.g*(self.m1+self.m2)*np.cos(self.theta1)+self.theta2dot**2*self.l2*self.m2*np.cos(self.theta1-self.theta2)
             divise = self.l2*(2*self.m1+self.m2-self.m2*np.cos(2*self.theta1-2*self.theta2))
             
