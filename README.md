@@ -2,7 +2,7 @@
 
 ## Table of contents
 * [Mathematics](#Mathematics)
-* [Screenshots](#Screenshots)
+* [Screenshot](#Screenshot)
 
 ## Mathematics
 
@@ -23,6 +23,6 @@ x2 = x1 + L2 sin theta2
 y2 = y1 + L2 cos theta2
 ```
 
-## Screenshots
+## Screenshot
 
 ![alt text](http://image.noelshack.com/fichiers/2020/25/3/1592388871-unknown.png)
