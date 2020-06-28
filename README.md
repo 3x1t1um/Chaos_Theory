@@ -10,8 +10,6 @@ Diagram :
 
 ![alt text](http://image.noelshack.com/fichiers/2020/25/3/1592384284-unnamed.jpg)
 
-Theta1 and Theta0 :
-
 ![alt text](http://image.noelshack.com/fichiers/2020/25/3/1592384419-capture.png)
 
 Positions x1, y1, x2 and y2 :
