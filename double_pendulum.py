@@ -2,7 +2,7 @@ from random import randint
 from tkinter import *
 import numpy as np
 
-class Pendulum(object):
+class Pendulum:
     """docstring for Pendulum"""
     def __init__(self):
         self.l1, self.l2 = 100, 100
